@@ -22,5 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
     path('integrantes', views.listadointegrantes),
-    path('ponerintegrantes', views.agregarintegrantes),
+    path('ponerintegrantes.html', views.agregarintegrantes),
 ]
