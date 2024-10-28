@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Listado de Integrantes</div>
+    {% if integrantes %}
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Rut</th>
+                <th>Edad</th>
+                <th>Grupo</th>
+                <th>Cancion</th>
+                <th>Localidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for integrante in integrantes %}
+            <tr>
+                <td>{{ integrante.nombre }}</td>
+                <td>{{ integrante.rut }}</td>
+                <td>{{ integrante.edad }}</td>
+                <td>{{ integrante.grupo }}</td>
+                <td>{{ integrante.cancion }}</td>
+                <td>{{ integrante.localidad }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% else %}
+
+    <div>
+        <strong>No se encuentran Integrantes aun</strong>
+    </div>
+
+    {% endif %}
+
+    <a href="../">Volver</a>
+    <a href="../ponerintegrantes.html" class="btn">Agregar Integrantes</a>
+    
+</body>
+</html>
